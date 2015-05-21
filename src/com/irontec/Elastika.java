@@ -164,20 +164,27 @@ public class Elastika {
 
 		options.addOption("f", "file", true, "(Required) The document to be parsed and sent to Elastic.");
 
-		options.addOption("host", true, "(Optional) Elastic REST Endpoint hostname. Default http://localhost.");
+		options.addOption("h", "host", true, "(Optional) Elastic REST Endpoint hostname. Default http://localhost.");
 
 		options.addOption("p", "port", true, "(Optional) Elastic REST Endpoint port. Default 9200.");
 
-		options.addOption("h", "help", false, "Print this usage message");
+		options.addOption("?", "help", false, "Print this usage message");
+		
+		options.addOption("v", "version", false, "Display version information");
 
 		return options;
 	}
 
 	public static void readOptions(CommandLine cmd, Options options) {
 		if (cmd != null) {
-			if (cmd.hasOption("h") || cmd.hasOption("help")) {
+			if (cmd.hasOption("?") || cmd.hasOption("help")) {
 				HelpFormatter formatter = new HelpFormatter();
 				formatter.printHelp( "elastika", options);
+				System.exit(0);
+			}
+			if (cmd.hasOption("v") || cmd.hasOption("version")) {
+				System.out.println("Elastika v0.9 by Irontec S.L.");
+				System.out.println("Author: Axier Fernandez");
 				System.exit(0);
 			}
 			if (cmd.hasOption("i")) {
@@ -209,6 +216,9 @@ public class Elastika {
 			if(mFileName.isEmpty()) {
 				System.out.print("Missing required parameter local file name. Try executing the program with -f or --file options and the name of the file");
 				System.exit(0);
+			}
+			if (cmd.hasOption("h")) {
+				mHostname = cmd.getOptionValue("h");
 			}
 			if (cmd.hasOption("host")) {
 				mHostname = cmd.getOptionValue("host");
