@@ -2,13 +2,15 @@ Elastika
 ==============================
 
 
-Command line utility that extracts the metadata and plain text content of files supported by Apache Tika and send them to the Elastic server.
+Command line utility that extracts the metadata and plain text content of files supported by Apache Tika and send them to the [Elastic](https://www.elastic.co/) server.
 
 ----------
 
 Usage
 -------------
 Once downloaded, place the `tika-app.jar` file that it´s placed inside the `libs/` folder on the same folder that contains your `elastika.jar`. Now, you're ready to use Elastika.
+
+Note: this document assumes that the final user does have [Elastic](https://www.elastic.co/) installed and running at least on localhost or in some host that you can specify with the following options.
 
 Options:
 
