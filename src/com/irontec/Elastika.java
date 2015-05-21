@@ -28,7 +28,7 @@ import org.json.JSONObject;
  * @author axier
  *
  */
-public class Elastik {
+public class Elastika {
 
 	private static String mElasticIndice = "";
 	private static String mElasticType = "";
