@@ -20,11 +20,12 @@ Options:
      -f,--file <arg>     (Required) The document to be parsed and sent to
                          Elastic.
      
-     -host <arg>         (Optional) Elastic REST Endpoint hostname. Default
+     -h,--host <arg>     (Optional) Elastic REST Endpoint hostname. Default
                          http://localhost.
      -p,--port <arg>     (Optional) Elastic REST Endpoint port. Default 9200.
      
-     -h,--help           Print this usage message
+     -?,--help           Print this usage message
+     -v,--version        Display version information
      
 
 
