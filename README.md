@@ -4,7 +4,10 @@ Elastika
 
 Command line utility that extracts the metadata and plain text content of files supported by Apache Tika and send them to the [Elastic](https://www.elastic.co/) server.
 
-----------
+Relases
+-------------
+
+[v0.9](https://github.com/irontec/elastika/releases/tag/v0.9)
 
 Usage
 -------------
@@ -45,7 +48,16 @@ Outputs:
 	{"_type":"data","_version":1,"_id":"AU12rlvKHYuWDiEyeqrY","created":true,"_index":"ekt"}
 
 
-----------
+Building
+-------------
+
+On the first place the code into your java project [Eclipse](https://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/lunasr2). Now, for generating the jar file just follow this simple steps:
+
+- Right click on your project and click on `Export`
+- Select `Java > JAR File` and click `Next`
+- Enter the path of the folder where you want to leave the jar file on the `Select the export destination` section and click `Next` and `Next` again.
+- Now, on the JAR Manifest Specification part, on the `Select the class of the application entry point` select `Browse` and then select `Elastika`
+- Click `Finish` and you're done
 
 Libraries
 -------------
@@ -54,7 +66,6 @@ Libraries
  - [Apache Commons IO](https://commons.apache.org/proper/commons-io/)
  - [Apache Tika 1.8](https://tika.apache.org/)
 
-----------
 
 License
 -------------
